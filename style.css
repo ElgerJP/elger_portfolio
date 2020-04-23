@@ -1,0 +1,194 @@
+:root {
+	--primary-color: #222831;
+	--secondary-color: #393e46;
+	--main-text-color: #00adb5;
+	--text-color: #eee;
+	--max-width: 1100px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font: normal 1rem/1.5 "Arial", sans-serif;
+	background: var(--primary-color);
+	color: #fff;
+	overflow-x: hidden;
+	padding-bottom: 50px;
+}
+
+p {
+	color: var(--text-color);
+}
+
+#main-header {
+	background: var(--secondary-color);
+	padding: 2rem 0;
+}
+
+#main-header h3 {
+	color: var(--text-color);
+	margin-bottom: 2rem;
+	font-size: 1.5rem;
+	font-family: "Roboto", sans-serif;
+}
+
+.container {
+	max-width: var(--max-width);
+	margin: 0 auto;
+	text-align: center;
+}
+
+.icon {
+	font-size: 2rem;
+	padding: 0 0.7rem;
+	color: var(--text-color);
+	transition: all 0.3s ease-in-out;
+}
+
+.icon.github:hover {
+	color: black;
+	font-size: 2.2rem;
+}
+
+.icon.facebook:hover {
+	color: #3b5998;
+	font-size: 2.2rem;
+}
+
+.icon.linkedin:hover {
+	color: #0e76a8;
+	font-size: 2.2rem;
+}
+
+#main-header .container > h1 {
+	font-size: 2.3rem;
+	margin-bottom: 0.2rem;
+	color: var(--main-text-color);
+}
+
+#timeline ul {
+	background: var(--primary-color);
+	padding: 50px 0;
+}
+
+/* Division Line */
+#timeline ul li {
+	list-style: none;
+	position: relative;
+	width: 6px;
+	margin: 0 auto;
+	padding-top: 50px;
+	background: #fff;
+}
+
+/* Boxes */
+#timeline ul li div {
+	position: relative;
+	bottom: 0;
+	width: 400px;
+	padding: 1rem;
+	background: var(--secondary-color);
+	transition: all 0.5s ease-in-out;
+	visibility: hidden;
+	opacity: 0;
+	border-radius: 10px;
+}
+
+#timeline ul li div h3 {
+	color: var(--main-text-color);
+}
+
+/* Right Side */
+#timeline ul li:nth-child(2n-1) div {
+	left: 40px;
+	transform: translateX(200px);
+}
+
+/* Left Side */
+#timeline ul li:nth-child(2n) div {
+	left: -434px;
+	transform: translateX(-200px);
+}
+
+/* Dots */
+#timeline ul li:after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	width: 25px;
+	height: 25px;
+	background: inherit;
+	border-radius: 50%;
+	transform: translateX(-50%);
+	transition: background 0.5s ease-in-out;
+}
+
+/* Arrows Base */
+#timeline div:before {
+	content: "";
+	position: absolute;
+	bottom: 5px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+}
+
+/* Right Side Arrow */
+#timeline ul li:nth-child(2n-1) div:before {
+	left: -15px;
+	border-width: 8px 16px 8px 0;
+	border-color: transparent var(--secondary-color) transparent transparent;
+}
+
+/* Left Side Arrow */
+#timeline ul li:nth-child(2n) div:before {
+	right: -15px;
+	border-width: 8px 0 8px 16px;
+	border-color: transparent transparent transparent var(--secondary-color);
+}
+
+/* Show Boxes */
+#timeline ul li.show div {
+	transform: none;
+	visibility: visible;
+	opacity: 1;
+}
+
+#timeline ul li.show:after {
+	background: var(--secondary-color);
+}
+
+@media (max-width: 900px) {
+	#timeline ul li div {
+		width: 250px;
+	}
+
+	#timeline ul li:nth-child(2n) div {
+		left: -284px;
+	}
+}
+
+@media (max-width: 600px) {
+	#timeline ul li {
+		margin-left: 20px;
+	}
+
+	#timeline ul li div {
+		width: calc(100vw -90px);
+	}
+
+	#timeline ul li:nth-child(2n) div {
+		left: 40px;
+	}
+
+	#timeline ul li:nth-child(2n) div:before {
+		left: -15px;
+		border-width: 8px 16px 8px 0;
+		border-color: transparent var(--secondary-color) transparent transparent;
+	}
+}
