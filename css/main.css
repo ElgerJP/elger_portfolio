@@ -102,6 +102,8 @@ input[class^="btn-"]:hover {
   background: #2a002e;
   overflow: hidden;
   color: #fff; }
+  .item a {
+    color: #fff; }
   .item::after {
     content: "";
     position: absolute;
