@@ -441,7 +441,7 @@ img {
       padding: 1rem; }
   #header-home {
     height: 12rem;
-    background-position: center 230%; }
+    background-position: center 100%; }
     #header-home .container {
       padding-top: 1rem; }
     #header-home .header-content {
@@ -449,7 +449,7 @@ img {
   #header-inner {
     height: 12rem;
     border: none;
-    background-position: center 230%; }
+    background-position: center 100%; }
     #header-inner .container {
       padding-top: 1rem; }
   #home-a .specials,
@@ -496,6 +496,18 @@ img {
   #header-home .header-content {
     padding-top: 3rem; } }
 
-@media (max-height: 330px) {
+@media (max-height: 380px) {
   #header-home .header-content h1 {
-    font-size: 2rem; } }
+    font-size: 2rem; }
+  #work-a .container .items .item .item-text .item-text-wrap p {
+    font-size: 0.7rem; }
+  #work-a .container .items .item .item-text .item-text-wrap h2 {
+    font-size: 1rem; } }
+
+@media (max-height: 320px) {
+  #header-home .header-content h1 {
+    font-size: 2rem; }
+  #work-a .container .items .item .item-text .item-text-wrap p {
+    font-size: 0.6rem; }
+  #work-a .container .items .item .item-text .item-text-wrap h2 {
+    font-size: 0.8rem; } }
